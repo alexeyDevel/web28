@@ -8,9 +8,12 @@ const gamesRouter = require("./routes/games");
 const PORT = 3000;
 const app = express();
 
-app.use(express.static(path.join(__dirname, "public")), mainRoute, gamesRouter);
-
-app.use(bodyParser.json());
+app.use(
+  bodyParser.json(),
+  express.static(path.join(__dirname, "public")),
+  mainRoute,
+  gamesRouter
+);
 
 app.listen(PORT, () => {
   console.log(`Приложение запущено тут: http://localhost:${PORT}`);
