@@ -1,23 +1,16 @@
 {
-  "name": "web28",
+  "name": "adminka",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexeyDevel/web28.git"
-  },
-  "author": "Aleksey",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexeyDevel/web28/issues"
-  },
-  "homepage": "https://github.com/alexeyDevel/web28#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.19.2"
   },
   "devDependencies": {

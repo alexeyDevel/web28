@@ -1,11 +1,17 @@
 const express = require("express");
-const gameRouter = require("./routes/game");
-const userRouter = require("./routes/user");
+const bodyParser = require("body-parser");
+const path = require("path");
+
+const mainRoute = require("./routes/main");
+const gamesRouter = require("./routes/games");
+
+const PORT = 3000;
 const app = express();
-const port = 3000;
 
-app.use(gameRouter, userRouter);
+app.use(express.static(path.join(__dirname, "public")), mainRoute, gamesRouter);
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.use(bodyParser.json());
+
+app.listen(PORT, () => {
+  console.log(`Приложение запущено тут: http://localhost:${PORT}`);
 });
